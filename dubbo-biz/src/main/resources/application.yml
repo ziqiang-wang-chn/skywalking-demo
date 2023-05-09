@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: dubbo-biz
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: localhost:8848
+        namespace: public
+      config:
+        contextPath: /nacos
+dubbo:
+  application:
+    name: dubbo-biz
+  registry:
+    address: nacos://localhost:8848
+  protocol:
+    port: 20883
